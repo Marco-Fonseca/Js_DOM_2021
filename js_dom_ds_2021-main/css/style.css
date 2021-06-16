@@ -26,7 +26,6 @@ body {
     -ms-box-shadow: none
 }
 
-
 .px-3 {
     padding-left: 1rem !important
 }
@@ -42,7 +41,6 @@ body {
     border: 1px solid #d2d2dc;
     border-radius: 0
 }
-
 
 .px-3 {
     padding-right: 1rem !important
@@ -180,4 +178,15 @@ body {
 .d-flex,
 .list-wrapper ul li {
     display: flex !important
+}
+
+.close {
+    position: absolute;
+    right: 45px;
+    padding: 3px 4px 3px 4px;
+}
+
+.close:hover {
+    background-color: #0f88ff;
+    color: white;
 }
