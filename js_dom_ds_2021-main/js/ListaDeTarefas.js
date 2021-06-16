@@ -1,4 +1,4 @@
-const novaTarefa = document.querySelector('[data-form-button]')
+( () => {const novaTarefa = document.querySelector('[data-form-button]')
 const inputTarefa = document.querySelector('[data-form-input]')
 
 function criartarefa(evento)
@@ -9,7 +9,7 @@ function criartarefa(evento)
     const listaDeTarefas = document.querySelector('[data-task]')
 
     novaLabel = document.createElement('label')
-    novaLabel.innerText = valorTarefa
+    novaLabel.innerText = `- ${valorTarefa}`
     novaLabel.className = "form-check-label"
 
     novoItem = document.createElement('li')
@@ -19,7 +19,8 @@ function criartarefa(evento)
 
     inputTarefa.value=""
 
-
 }
 
 novaTarefa.addEventListener('click',criartarefa)
+
+})()
