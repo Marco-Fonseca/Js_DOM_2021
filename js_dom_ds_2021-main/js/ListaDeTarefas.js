@@ -12,8 +12,10 @@
         return botaoDelete
     }
 
-    function deletarTarefa() {
-        console.log('Por favor delete essa Tarefa')
+    function deletarTarefa(evento) {
+        const botaoDeleteClicado = evento.target
+        const itemDaLista = botaoDeleteClicado.parentElement
+        itemDaLista.remove()
     }
 
     function criartarefa(evento) {
