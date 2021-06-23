@@ -194,3 +194,7 @@ body {
 .lista_atividades {
     margin-left: 2.5%;
 }
+
+.tarefa_concluida {
+    text-decoration: line-through;
+}

@@ -12,10 +12,26 @@
         return botaoDelete
     }
 
+    function criarBotaoConcluir() {
+        const botaoConcluir = document.createElement('input')
+        botaoConcluir.setAttribute('type', 'checkbox')
+        botaoConcluir.classList = "form-check-input"
+
+        botaoConcluir.addEventListener('click', concluirTarefa)
+
+        return botaoConcluir
+    }
+
     function deletarTarefa(evento) {
         const botaoDeleteClicado = evento.target
         const itemDaLista = botaoDeleteClicado.parentElement
         itemDaLista.remove()
+    }
+
+    function concluirTarefa(evento) {
+        const botaoConcluirClicado = evento.target
+        const itemDaListaConcluido = botaoConcluirClicado.parentElement
+        itemDaListaConcluido.classList.toggle('tarefa_concluida')
     }
 
     function criartarefa(evento) {
@@ -29,8 +45,11 @@
         novaLabel.className = "form-check-label"
 
         novoItem = document.createElement('li')
+
+        novoItem.appendChild(criarBotaoConcluir())
         novoItem.appendChild(novaLabel)
         novoItem.appendChild(criarBotaoDelete())
+
 
         listaDeTarefas.appendChild(novoItem)
 
