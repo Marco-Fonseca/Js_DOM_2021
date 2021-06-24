@@ -1,6 +1,5 @@
 (() => {
     const novaTarefa = document.querySelector('[data-form-button]')
-    const inputTarefa = document.querySelector('[data-form-input]')
 
     function criarBotaoDelete() {
         const botaoDelete = document.createElement('span')
@@ -37,6 +36,7 @@
     function criartarefa(evento) {
         evento.preventDefault()
 
+        const inputTarefa = document.querySelector('[data-form-input]')
         const valorTarefa = inputTarefa.value
         const listaDeTarefas = document.querySelector('[data-task]')
 
