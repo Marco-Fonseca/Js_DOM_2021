@@ -1,7 +1,7 @@
-(() => {
-    const novaTarefa = document.querySelector('[data-form-button]')
+(() => { //Criacao da funcao anonima para protecao do cod
+    const novaTarefa = document.querySelector('[data-form-button]') // constante que retorna o botao criado no hmtl
 
-    function criarBotaoDelete() {
+    function criarBotaoDelete() { // funcao que cria o botao de deletar tarefa
         const botaoDelete = document.createElement('span')
         botaoDelete.innerText = "X"
         botaoDelete.classList = "close"
@@ -11,7 +11,7 @@
         return botaoDelete
     }
 
-    function criarBotaoConcluir() {
+    function criarBotaoConcluir() { //funcao que cria o botao de concluir tarefa
         const botaoConcluir = document.createElement('input')
         botaoConcluir.setAttribute('type', 'checkbox')
         botaoConcluir.classList = "form-check-input"
@@ -21,19 +21,19 @@
         return botaoConcluir
     }
 
-    function deletarTarefa(evento) {
+    function deletarTarefa(evento) { // funcao que deleta uma tarefa
         const botaoDeleteClicado = evento.target
         const itemDaLista = botaoDeleteClicado.parentElement
         itemDaLista.remove()
     }
 
-    function concluirTarefa(evento) {
+    function concluirTarefa(evento) { // funcao que conclui uma tarefa
         const botaoConcluirClicado = evento.target
         const itemDaListaConcluido = botaoConcluirClicado.parentElement
         itemDaListaConcluido.classList.toggle('tarefa_concluida')
     }
 
-    function criartarefa(evento) {
+    function criarTarefa(evento) { // funca que criar uma nova tarefa na lista
         evento.preventDefault()
 
         const inputTarefa = document.querySelector('[data-form-input]')
@@ -57,6 +57,6 @@
 
     }
 
-    novaTarefa.addEventListener('click', criartarefa)
+    novaTarefa.addEventListener('click', criarTarefa) // chamada da funcao criarTarefa quando o botao eh apertado
 
 })()

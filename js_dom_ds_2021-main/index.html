@@ -9,7 +9,9 @@
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
 
+    <!--adicao do js para estilizacao da pagina com o bootstrap-->
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <!--adicao do js para estilizacao da pagina com o bootstrap-->
     <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
 </head>
 
@@ -22,10 +24,11 @@
                         <h4 class="card-title">Lista de Atividades</h4>
                         <form class="add-items d-flex" action="">
                             <input type="text" class="form-control todo-list-input" placeholder="O que você precisa fazer hoje?" data-form-input>
-                            <button class="dd btn btn-primary font-weight-bold todo-list-add-btn" data-form-button> +
-                            </button>
+                            <!--botao de adicao de tarefas-->
+                            <button class="dd btn btn-primary font-weight-bold todo-list-add-btn" data-form-button>+</button>
                         </form>
                         <div class="list-wrapper">
+                            <!--tag de lista-->
                             <ul class="d-flex flex-column-reverse todo-list lista_atividades" data-task></ul>
                         </div>
                     </div>
@@ -33,6 +36,7 @@
             </div>
         </div>
     </div>
+    <!--adicao do js da pagina-->
     <script type='text/javascript' src='js/ListaDeTarefas.js'></script>
 </body>
 
